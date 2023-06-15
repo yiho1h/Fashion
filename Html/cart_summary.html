@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Summary</title>
+
+    <link rel="stylesheet" href="/fashionweb/css/root.css">
+    <link rel="stylesheet" href="/fashionweb/css/color.css">
+    <link rel="stylesheet" href="/fashionweb/css/style.css">
+    <link rel="stylesheet" href="/fashionweb/css/structure.css">
+    <link rel="stylesheet" href="/fashionweb/css/structure_phone.css">
+
+    <!-- Icons & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body>
+	<!-- Main navigation bar ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="topBar">
+        <div class="topBar_container">
+			<form class="searchBar phone_remove" action="/fashionweb/Html/search_results.html" method="get">
+                <input id="search_input" type="search" placeholder="Search..." name="search">
+                <button type="submit" onclick="toSearchResult()"><ion-icon name="search-outline" style="color: #333;"></ion-icon></button>
+            </form> 
+			<div class="searchBt_phone" onclick="openSearch()">
+                <ion-icon name="search-outline" style="color: #333;"></ion-icon></button>
+            </div> 
+        </div>
+
+		<div class="topBar_container">
+            <ul class="topBar_dropdown">
+                <li class="dropdown_list">
+                    <a class="dropdown_bt phone_remove">
+                        <span>New arrivals</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="dropdownList_container">
+                        <li><a href="#">Seasonal Trends</a></li>
+                        <li><a href="#">Designer Collections</a></li>
+                        <li><a href="#">Eco-friendly Scarves</a></li>
+                        <li><a href="#">Limited Edition</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown_list">
+                    <a class="dropdown_bt">
+                        <span>Shops</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="dropdownList_container">
+                        <li class="computer_remove beBold"><a href="#">Seasonal Trends</a></li>
+                        <li class="computer_remove beBold"><a href="#">Designer Collections</a></li>
+                        <li class="computer_remove beBold"><a href="#">Eco-friendly Scarves</a></li>
+                        <li class="computer_remove beBold"><a href="#">Limited Edition</a></li>
+                        <ul class="special_ul">
+							<li><a style="font-weight:bold;">By Material</a></li>
+                            <li><a href="#">Cashmere</a></li>
+                            <li><a href="#">Silk</a></li>
+                            <li><a href="#">Wool</a></li>
+                            <li><a href="#">Cotton</a></li>
+							<li><a style="font-weight:bold;">By Style</a></li>
+                            <li><a href="#">Infinity</a></li>
+                            <li><a href="#">Square</a></li>
+                            <li><a href="#">Wrap</a></li>
+                            <li><a href="#">Shawl</a></li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+		<div class="topBar_container">
+			<img src="/fashionweb/icons/nav-log.png" alt="Fashion Anything" onclick="goHomePage()">
+		</div>
+		<div class="topBar_container phone_remove">
+			<ul class="topBar_dropdown">
+                <li class="dropdown_list">
+                    <a class="dropdown_bt phone_remove" href="#">
+                        <span>Blog</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="dropdownList_container">
+                        <li><a href="#">Styling Tips</a></li>
+                        <li><a href="#">Fashion News</a></li>
+						<li><a href="#">Care and Maintenance</a></li>
+						<li><a href="#">Designer Interviews</a></li>
+						<li><a href="#">Sustainability in Fashion</a></li>
+                    </ul>
+                </li>
+				<li class="dropdown_list">
+                    <a class="dropdown_bt phone_remove" href="#">
+                        <span>Contact</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="dropdownList_container">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Store Locator</a></li>
+                    </ul>
+                </li>
+			</ul>
+		</div>
+
+
+		<div class="topBar_container">
+			<div>
+                <div id="cart_icon_container">
+                    <img id="cart_icon" src="/fashionweb/icons/cart_icon.png"><div id="cart_items">0</div>
+                </div>
+            </div>
+            <div class="phone_remove">
+                <img id="user_icon" class="notDesigned" src="/fashionweb/icons/user_icon.png">
+            </div> 
+		</div>
+        
+            <!-- side cart, the drop down cart in the top main navigation bar-->
+			<div class="sideCart" id="sideCart-open">
+
+				<div class="sideCart_title">
+					<p>CART - <span>2</span> Items</p>
+					<ion-icon id="cart_close" name="close-outline"></ion-icon>
+				</div>
+				
+				<div class="sideCart_items_container" id="sideCart_addItems">
+					<div class="sideCart_items">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_1.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Cozy Wools Scarf</p>
+								</div>
+								<p>$59.95</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_1" >remove</a>
+						</div>
+					</div>
+					<div class="sideCart_items">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_2.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Soft Wools Scarf</p>
+								</div>
+								<p>$35.00</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_2">remove</a>
+						</div>
+					</div>
+	
+				<div class="subtotalPrice_container">
+					<div>
+						<p>Subtotal:</p>
+						<p><span id="subtotalPrice_itemTotal">0</span> items total</p>
+					</div>
+					<div>
+						<p>$<span id="subtotalPrice">0.00</span></p>
+						<p>tax included and shipping calculated at checkout</p>
+					</div>
+				</div>
+
+				<div class="side_btn">				
+					<div class="nextStep1">
+					<form action="/fashionweb/Html/cart_summary.html">
+					  <input type="submit" value="VIEW CART">
+					</form>
+				  </div>
+				  <div class="nextStep2">
+					<form action="/fashionweb/Html/checkout.html">
+					  <input type="submit" value="CHECKOUT">
+					</form>
+				</div>
+	
+				<div class="sideCart_footer">
+					<img src="/fashionweb/icons/VISA_icon.png" alt="Visa">
+					<img src="/fashionweb/icons/Mastercard_icon.png" alt="Mastercard">
+				</div>
+			</div>
+
+	
+			</div>
+		</div>
+
+    <!--the searching area in phone version,  appear after the user click search button-->
+    <div class="searchBar_drop_shadow" id="searchBg_open">
+    </div>
+    <div class="searchBar_container computer_remove" id="searchBar_open">
+        <form class="searchBar_phone" action="/fashionweb/Html/search_results.html" method="get">
+            <input id="search_input" type="text" placeholder="Search..." name="search">
+            <button type="submit" onclick="toSearchResult()"><ion-icon name="search-outline"></ion-icon></button>
+        </form>
+    </div>
+
+	<!--Navigation Bar 2-->
+	<div class="container-video">
+		<video class="background-video" autoplay loop muted>
+			<source src="/fashionweb/image/background/water.mov" type="video/mp4">
+		</video>
+		<div class="text-container1">
+			<p class="home-search">Home - Cart</p>
+			<br>
+			<p class="results">Product Cart</p>
+		</div>
+	</div>
+
+	<!--Cart-->
+	<div class="main-container-table">
+		<!-- the first sub-container -->
+		<div class="table-container">
+		  <div class="table-row header">
+			<div class="table-cell">Images</div>
+			<div class="table-cell">Courses</div>
+			<div class="table-cell">Unit Price</div>
+			<div class="table-cell">Quantity</div>
+			<div class="table-cell">Total</div>
+			<div class="table-cell">Remove</div>
+		  </div>
+		  <div class="table-row">
+			<div class="table-cell"><img src="/fashionweb/image/covers/cover_2.jpeg" alt="course-image"></div>
+			<div class="table-cell txt">Soft Wools Scarf</div>
+			<div class="table-cell txt">$35.00</div>
+			<div class="table-cell t-qt">
+				<div class="quantity-buttons">
+					<button class="decrement-button">-</button>
+					<input type="text" class="quantity-input" value="1">
+					<button class="increment-button">+</button>
+				  </div>
+			</div>
+			<div class="table-cell txt">$35.00</div>
+			<div class="table-cell txt"><button>Remove</button></div>
+		  </div>
+		  <div class="table-row">
+			<div class="table-cell"><img src="/fashionweb/image/covers/cover_1.jpeg" alt="course-image"></div>
+			<div class="table-cell txt">Cozy Wools Scarf</div>
+			<div class="table-cell txt">$59.95</div>
+			<div class="table-cell t-qt">
+				<div class="quantity-buttons">
+					<button class="decrement-button">-</button>
+					<input type="text" class="quantity-input" value="1">
+					<button class="increment-button">+</button>
+				</div>
+			</div>
+			<div class="table-cell txt">$59.95</div>
+			<div class="table-cell txt"><button >Remove</button></div>
+		  </div>
+		</div>
+	
+		<!-- the second sub-container -->
+		<div class="coupon-update-container">
+		  <div class="coupon-container">
+			<input type="text" placeholder="Coupon code">
+			<div class="nextStep"><input type="submit" value="Apply Coupon"></div>
+		  </div>
+		  <div class="nextStep update"><input type="submit" value="Update Cart"></div>
+		</div>
+	
+		<!-- the third sub-container -->
+		<div class="cart-totals-container">
+		  <div class="cart-totals-header">Cart Totals</div>
+		  <div class="cart-totals-table">
+			<div class="totals-row">
+			  <span class="label">Subtotal</span>
+			  <span class="value">$94.95</span>
+			</div>
+			<div class="totals-row">
+			  <span class="label">Total</span>
+			  <span class="value">$98.00</span>
+			</div>
+		  </div>
+		  <div class="taxes">(include $3.05 taxes)</div>
+		  <div class="nextStep">
+			<form action="/fashionweb/Html/checkout.html">
+			  <input type="submit" value="Proceed to Checkout">
+			</form>
+		  </div>
+		</div>
+	
+	  </div>
+	  
+
+    <!-- footer ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<footer>
+		<div class="footbar-container">
+		  <br>
+  
+			<div class="footbar-phone computer_remove">
+			  <div class="column">
+				  <img src="/fashionweb/icons/nav-log.png" alt="Fashion Anything" onclick="goHomePage()">
+				</div>
+			  <div class="searchBar">
+				  <input type="email" placeholder="Email address">
+			  </div>
+			  <div class="column">
+				  <a href="#">CONTACT</a>
+				  <a href="#">SHIPPING & RETURNS</a>
+				  <a href="#">CARE</a><br>
+				  <a href="#">CAREERS</a>
+				  <a href="#">TERMS</a>
+				  <a href="#">PRIVACY</a>
+			  </div>
+			  <div class="column">
+				  <a href="#">STOCKISTS</a>
+				  <a href="#">ARCHIVE</a>
+				  <a href="#">INSTAGRAM</a>
+				  <a href="#">ACCOUNT</a>
+				</div>
+			</div>
+			
+		  <div class="footbar phone_remove">
+			  <div class="column">
+				  <img src="/fashionweb/icons/nav-log.png" alt="Fashion Anything" onclick="goHomePage()">
+				</div>
+			  <div class="column">
+			  </div>
+			  <div class="column">
+				<a href="#">STOCKISTS</a>
+				<a href="#">ARCHIVE</a>
+				<a href="#">INSTAGRAM</a>
+				<a href="#">ACCOUNT</a>
+			  </div>
+			  <div class="column">
+				<a href="#">Sign up</a>
+			  </div>
+			  <div class="column searchBar">
+				<input type="email" placeholder="Email address">
+			  </div>
+			  <div class="column">
+			  </div>
+			  <div class="column">
+				<a href="#">CONTACT</a>
+				<a href="#">SHIPPING & RETURNS</a>
+				<a href="#">CARE</a>
+				<a href="#">CAREERS</a>
+				<a href="#">TERMS</a>
+				<a href="#">PRIVACY</a>
+			  </div>
+		  </div>
+		  <div class="column Copyright">
+			  <br>
+			  <p>Copyright © 2023, Yiheng Zhang.</p>
+		  </div>
+		  <br>
+		</div>
+	   </div>
+	  </footer>
+	  
+</body>
+
+<!-- the javascript for this page -->
+<script src="/fashionweb/Javascript/generalUse.js"></script>
+</html>
