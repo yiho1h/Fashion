@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Anything</title>
+
+
+    <link rel="stylesheet"  href="/fashionweb/css/root.css">
+    <link rel="stylesheet" href="/fashionweb/css/color.css">
+    <link rel="stylesheet" href="/fashionweb/css/style.css">
+    <link rel="stylesheet" href="/fashionweb/css/structure.css">
+    <link rel="stylesheet" href="/fashionweb/css/structure_phone.css">
+
+    <!-- Icons & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+	<!-- Main navigation bar ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="topBar">
+        <div class="topBar_container">
+			<form class="searchBar phone_remove" action="/fashionweb/Html/search_results.html" method="get">
+                <input id="search_input" type="search" placeholder="Search..." name="search">
+                <button type="submit" onclick="toSearchResult()"><ion-icon name="search-outline" style="color: #333;"></ion-icon></button>
+            </form> 
+			<div class="searchBt_phone" onclick="openSearch()">
+                <ion-icon name="search-outline" style="color: #333;"></ion-icon></button>
+            </div> 
+        </div>
+
+		<div class="topBar_container">
+            <ul class="topBar_dropdown">
+                <li class="dropdown_list">
+                    <a class="dropdown_bt phone_remove">
+                        <span>New arrivals</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="dropdownList_container">
+                        <li><a href="#">Seasonal Trends</a></li>
+                        <li><a href="#">Designer Collections</a></li>
+                        <li><a href="#">Eco-friendly Scarves</a></li>
+                        <li><a href="#">Limited Edition</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown_list">
+                    <a class="dropdown_bt">
+                        <span>Shops</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="dropdownList_container">
+                        <li class="computer_remove beBold"><a href="#">Seasonal Trends</a></li>
+                        <li class="computer_remove beBold"><a href="#">Designer Collections</a></li>
+                        <li class="computer_remove beBold"><a href="#">Eco-friendly Scarves</a></li>
+                        <li class="computer_remove beBold"><a href="#">Limited Edition</a></li>
+                        <ul class="special_ul">
+							<li><a style="font-weight:bold;">By Material</a></li>
+                            <li><a href="#">Cashmere</a></li>
+                            <li><a href="#">Silk</a></li>
+                            <li><a href="#">Wool</a></li>
+                            <li><a href="#">Cotton</a></li>
+							<li><a style="font-weight:bold;">By Style</a></li>
+                            <li><a href="#">Infinity</a></li>
+                            <li><a href="#">Square</a></li>
+                            <li><a href="#">Wrap</a></li>
+                            <li><a href="#">Shawl</a></li>
+                        </ul>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+		<div class="topBar_container">
+			<img src="/fashionweb/icons/nav-log.png" alt="Fashion Anything" onclick="goHomePage()">
+		</div>
+		<div class="topBar_container phone_remove">
+			<ul class="topBar_dropdown">
+                <li class="dropdown_list">
+                    <a class="dropdown_bt phone_remove" href="#">
+                        <span>Blog</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="dropdownList_container">
+                        <li><a href="#">Styling Tips</a></li>
+                        <li><a href="#">Fashion News</a></li>
+						<li><a href="#">Care and Maintenance</a></li>
+						<li><a href="#">Designer Interviews</a></li>
+						<li><a href="#">Sustainability in Fashion</a></li>
+                    </ul>
+                </li>
+				<li class="dropdown_list">
+                    <a class="dropdown_bt phone_remove" href="#">
+                        <span>Contact</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </a>
+                    <ul class="dropdownList_container">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Store Locator</a></li>
+                    </ul>
+                </li>
+			</ul>
+		</div>
+
+
+		<div class="topBar_container">
+			<div>
+                <div id="cart_icon_container">
+                    <img id="cart_icon" src="/fashionweb/icons/cart_icon.png"><div id="cart_items">0</div>
+                </div>
+            </div>
+            <div class="phone_remove">
+                <img id="user_icon" class="notDesigned" src="/fashionweb/icons/user_icon.png">
+            </div> 
+		</div>
+
+        
+            <!-- side cart, the drop down cart in the top main navigation bar-->
+			<div class="sideCart" id="sideCart-open">
+
+				<div class="sideCart_title">
+					<p>CART - <span id="title_itemTotal">0</span> Items</p>
+					<ion-icon id="cart_close" name="close-outline"></ion-icon>
+				</div>
+				
+				<div class="sideCart_items_container" id="sideCart_addItems">
+					<div class="sideCart_items" id="item_1">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_1.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Cozy Wools Scarf</p>
+								</div>
+								<p>$59.95</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_1" >remove</a>
+						</div>
+					</div>
+					<div class="sideCart_items" id="item_2">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_2.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Soft Wools Scarf</p>
+								</div>
+								<p>$35.00</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_2">remove</a>
+						</div>
+					</div>
+					<div class="sideCart_items" id="item_3">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_3.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Warm Wools Scarf</p>
+								</div>
+								<p>$45.40</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_3">remove</a>
+						</div>
+					</div>
+					<div class="sideCart_items" id="item_4">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_4.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Stylish Wools Scarf</p>
+								</div>
+								<p>$72.25</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_4">remove</a>
+						</div>
+					</div>
+					<div class="sideCart_items" id="item_5">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_5.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Cozy Wools Scarf</p>
+								</div>
+								<p>$64.80</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_5">remove</a>
+						</div>
+					</div>
+					<div class="sideCart_items" id="item_6">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_7.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Brown Wools Scarf</p>
+								</div>
+								<p>$61.25</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_6">remove</a>
+						</div>
+					</div>
+					<div class="sideCart_items" id="item_7">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_11.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Sin Eater</p>
+									<p>Megan Campisi</p>
+								</div>
+								<p>$49.99</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_7">remove</a>
+						</div>
+					</div>
+					<div class="sideCart_items" id="item_8">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_12.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Wide Wool Scarf</p>
+								</div>
+								<p>$34.90</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_8">remove</a>
+						</div>
+					</div>
+					<div class="sideCart_items" id="item_9">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_13.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>The Warehouse</p>
+									<p>Rob Hart</p>
+								</div>
+								<p>$42.00</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_9">remove</a>
+						</div>
+					</div>
+					<div class="sideCart_items" id="item_10">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_14.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Creatures</p>
+									<p>Crissy Van Meter</p>
+								</div>
+								<p>$43.00</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_10">remove</a>
+						</div>
+					</div>
+					<div class="sideCart_items" id="item_11">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_15.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Die Archigez Dahie</p>
+									<p>Chana Porter</p>
+								</div>
+								<p>$29.00</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_11">remove</a>
+						</div>
+					</div>
+					<div class="sideCart_items" id="item_12">
+						<div>
+							<div><img src="/fashionweb/image/covers/cover_16.jpeg" onclick="goProductPage()"></div>
+							<div class="sideCart_itemInfo">
+								<div>
+									<p>Daydream</p>
+									<p>Pie Books</p>
+								</div>
+								<p>$89.00</p>
+							</div>
+						</div>
+						<div>
+							<p class="sideCart_quantityContainer">Qty:
+								<span>
+									<ion-icon name="remove"></ion-icon>
+									<span>1</span>
+									<ion-icon name="add"></ion-icon>
+								</span>
+							</p>
+							<a class="sideCart_removeBt" id="remove_12">remove</a>
+						</div>
+					</div>
+				</div>
+	
+				<div class="subtotalPrice_container">
+					<div>
+						<p>Subtotal:</p>
+						<p><span id="subtotalPrice_itemTotal">0</span> items total</p>
+					</div>
+					<div>
+						<p>$<span id="subtotalPrice">0.00</span></p>
+						<p>tax included and shipping calculated at checkout</p>
+					</div>
+				</div>
+
+				<div class="side_btn">				
+					<div class="nextStep1">
+					<form action="/fashionweb/Html/cart_summary.html">
+					  <input type="submit" value="VIEW CART">
+					</form>
+				  </div>
+				  <div class="nextStep2">
+					<form action="/fashionweb/Html/checkout.html">
+					  <input type="submit" value="CHECKOUT">
+					</form>
+				</div>
+	
+				<div class="sideCart_footer">
+					<img src="/fashionweb/icons/VISA_icon.png" alt="Visa">
+					<img src="/fashionweb/icons/Mastercard_icon.png" alt="Mastercard">
+				</div>
+			</div>
+
+        </div>
+    </div>
+
+    <!--the searching area in phone version,  appear after the user click search button-->
+    <div class="searchBar_drop_shadow" id="searchBg_open">
+    </div>
+    <div class="searchBar_container computer_remove" id="searchBar_open">
+        <form class="searchBar_phone" action="/fashionweb/Html/search_results.html" method="get">
+            <input id="search_input" type="text" placeholder="Search..." name="search">
+            <button type="submit" onclick="toSearchResult()"><ion-icon name="search-outline"></ion-icon></button>
+        </form>
+    </div>
+
+    <!-- The cover in the heading in phone version -->
+    <div id="headingImg_phone_container">
+        <img id="headingImg_phone" src="/fashionweb/image/covers/slider-bg-01.png" alt="2022 new arrivals" onclick="goProductPage()">
+    </div>
+
+<!-- Heading, designed with an advertisement slider bar---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+     <div class="heading">
+        <div class="heading_fg" id="heading_fg1">
+            <div>
+                <a href="#"><br><br><br>2022 FW <br>Compromise Glow</a>
+                <a href="#">New Modern Stylist Fashionable Women's Wear holder
+                </a>
+				<div class="hd-btn">
+					<div class="nextStep"  onclick="goProductPage()">                
+						<p>Shop Now</p>
+					</div>
+				</div>
+            </div>
+			<div id="heading_img">
+				<img src="/fashionweb/image/covers/slider-bg-01.png" alt="New Arrivals 2023SS" onclick="goProductPage()">
+			</div>
+            <!-- <ion-icon id="heading_scrollRight" class="notDesigned" name="chevron-forward-outline"></ion-icon> -->
+        </div>
+      </div>
+	  <br>
+<!--自己的分类-->
+<div class="container-collage">
+  <div class="row">
+    <div class="column">
+      <div class="sub-column">
+        <!-- 第一等分 -->
+        <img src="/fashionweb/image/background/bg1.jpg" alt="New Arrivals 2023SS" onclick="goProductPage()">
+        <a class="shop-now-button " href="#" style="color: white;">Shop Now</a>
+      </div>
+    </div>
+    <div class="column">
+      <div class="sub-column">
+        <!-- 第二等分的上半部分 -->
+        <img src="/fashionweb/image/background/bg2.jpg" alt="New Arrivals 2023SS" onclick="goProductPage()">
+        <a class="shop-now-button " href="#" style="color: white;">Shop Now</a>
+      </div>
+      <div class="sub-column">
+        <!-- 第二等分的下半部分 -->
+        <img src="/fashionweb/image/background/bg3.jpg" alt="New Arrivals 2023SS" onclick="goProductPage()">
+        <a class="shop-now-button " href="#" style="color: white;">Shop Now</a>
+      </div>
+    </div>
+    <div class="column">
+      <!-- 第三等分 -->
+      <div class="sub-column">
+        <img src="/fashionweb/image/background/bg4.jpg" alt="New Arrivals 2023SS" onclick="goProductPage()">
+        <a class="shop-now-button " href="#" style="color: white;">Shop Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- recommendation ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<div>
+		<div class="scrollContainer1">
+			<div class="container-fb-title">
+				<h2>New Fashion</h2>
+				<ion-icon class="notDesigned" name="chevron-forward-outline"></ion-icon>
+			</div>
+			<br>
+			<div class="scrollContainer">
+				<div class="productList">
+				<div class="productItem">
+					<img src="/fashionweb/image/product/home-two/product-21.jpg" alt="Product 1" class="productImage">
+					<h3 class="productName">Product 1</h3>
+					<p class="productPrice">$19.99</p>
+					<p class="productReviews">10 reviews</p>
+				</div>
+				<div class="productItem">
+					<img src="/fashionweb/image/product/home-two/product-23.jpg" alt="Product 2" class="productImage">
+					<h3 class="productName">Product 2</h3>
+					<p class="productPrice">$29.99</p>
+					<p class="productReviews">5 reviews</p>
+				</div>
+				<div class="productItem">
+					<img src="/fashionweb/image/product/home-two/product-25.jpg" alt="Product 3" class="productImage">
+					<h3 class="productName">Product 3</h3>
+					<p class="productPrice">$39.99</p>
+					<p class="productReviews">15 reviews</p>
+				</div>
+				<div class="productItem">
+					<img src="/fashionweb/image/product/home-two/product-27.jpg" alt="Product 4" class="productImage">
+					<h3 class="productName">Product 4</h3>
+					<p class="productPrice">$49.99</p>
+					<p class="productReviews">8 reviews</p>
+				</div>
+				<div class="productItem">
+					<img src="/fashionweb/image/product/home-two/product-29.jpg" alt="Product 5" class="productImage">
+					<h3 class="productName">Product 5</h3>
+					<p class="productPrice">$59.99</p>
+					<p class="productReviews">12 reviews</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--滚动促销-->
+<div class="container-sales">
+	<div class="scrolling-banner">
+		<div class="scrolling-text">GREAT DEAL OF THE DAY SHOP NOW </div>
+	</div>
+	<div class="content-wrapper">
+	  <div class="left-content">
+		<div class="product-info">
+		  <div class="price">$49.00 <span style="color:gray">$59.00</span></div>
+		  <div class="name">Twist winter handmade wool scarf</div>
+		  <div class="description">Introducing our Stylish Wool Scarf, a luxurious accessory that will keep you warm and elevate your fashion game. Made from high-quality wool, this scarf is designed to provide both comfort and style during the colder months.</div>
+		  <div class="countdown">
+			<img src="/fashionweb/image/background/timer.jpg" alt="Image">
+		</div>
+		</div>
+	  </div>
+	  <div class="right-content phone_remove">
+		<img src="/fashionweb/image/background/sales.png" alt="Image">
+	  </div>
+	</div>
+	<div class="sales_phone computer_remove">
+		<img src="/fashionweb/image/background/sales.png" alt="Image">
+	  </div>
+  </div>
+  
+<!--照片墙-->
+<div class="container-fb">
+	<div class="container-fb-title">
+		<h2>User Feedbacks</h2>
+		<ion-icon class="notDesigned" name="chevron-forward-outline"></ion-icon>
+	</div>  
+	<br>
+	<div class="feedbacks-container">
+		<div class="feedback">
+		<img src="/fashionweb/image/background/comment1.jpg" alt="Feedback 1">
+		</div>
+		<div class="feedback">
+		<img src="/fashionweb/image/background/comment2.png" alt="Feedback 2">
+		</div>
+		<div class="feedback">
+		<img src="/fashionweb/image/background/comment3.png" alt="Feedback 3">
+		</div>
+		<div class="feedback">
+		<img src="/fashionweb/image/background/comment4.png" alt="Feedback 4">
+		</div>
+	</div>
+</div>
+
+<!--Blogs-->
+<div class="container-blog">
+	<div class="container-blog-title">
+		<h2>Blogs & Insights</h2>
+	</div> 
+	<br>
+	<div class="blog-container">
+		<div class="blog-row">
+		<div class="blog-item">
+			<img src="/fashionweb/image/blog/blog-thumb-05.jpg" alt="Blog Image 1">
+			<p class="blog-date">May 1, 2023</p>
+			<h3 class="blog-title">From Tradition to Fashion: The Story Behind Our Handcrafted Scarves"</h3>
+		</div>
+		<div class="blog-item">
+			<img src="/fashionweb/image/blog/blog-thumb-06.jpg" alt="Blog Image 2">
+			<p class="blog-date">May 2, 2023</p>
+			<h3 class="blog-title">Celebrating Artisans: Honoring the Craftsmanship Behind Our Scarves</h3>
+		</div>
+		<div class="blog-item">
+			<img src="/fashionweb/image/blog/blog-thumb-07.jpg" alt="Blog Image 3">
+			<p class="blog-date">May 3, 2023</p>
+			<h3 class="blog-title">Behind the Scenes: Discovering the Design Process of Our Unique Scarves</h3>
+		</div>
+		<div class="blog-item">
+			<img src="/fashionweb/image/blog/blog-thumb-08.jpg" alt="Blog Image 4">
+			<p class="blog-date">May 4, 2023</p>
+			<h3 class="blog-title">Behind the Scenes: Discovering the Design Process of Our Unique Scarves</h3>
+		</div>
+		</div>
+	</div>
+</div>
+
+    <!-- footer ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <footer>
+	  <div class="footbar-container">
+		<br>
+
+		  <div class="footbar-phone computer_remove">
+			<div class="column">
+				<img src="/fashionweb/icons/nav-log.png" alt="Fashion Anything" onclick="goHomePage()">
+			  </div>
+			<div class="searchBar">
+				<input type="email" placeholder="Email address">
+		    </div>
+			<div class="column">
+				<a href="#">CONTACT</a>
+				<a href="#">SHIPPING & RETURNS</a>
+				<a href="#">CARE</a><br>
+				<a href="#">CAREERS</a>
+				<a href="#">TERMS</a>
+				<a href="#">PRIVACY</a>
+			</div>
+			<div class="column">
+				<a href="#">STOCKISTS</a>
+				<a href="#">ARCHIVE</a>
+				<a href="#">INSTAGRAM</a>
+				<a href="#">ACCOUNT</a>
+			  </div>
+		  </div>
+		  
+		<div class="footbar phone_remove">
+			<div class="column">
+				<img src="/fashionweb/icons/nav-log.png" alt="Fashion Anything" onclick="goHomePage()">
+			  </div>
+			<div class="column">
+			</div>
+			<div class="column">
+			  <a href="#">STOCKISTS</a>
+			  <a href="#">ARCHIVE</a>
+			  <a href="#">INSTAGRAM</a>
+			  <a href="#">ACCOUNT</a>
+			</div>
+			<div class="column">
+			  <a href="#">Sign up</a>
+			</div>
+			<div class="column searchBar">
+			  <input type="email" placeholder="Email address">
+			</div>
+			<div class="column">
+			</div>
+			<div class="column">
+			  <a href="#">CONTACT</a>
+			  <a href="#">SHIPPING & RETURNS</a>
+			  <a href="#">CARE</a>
+			  <a href="#">CAREERS</a>
+			  <a href="#">TERMS</a>
+			  <a href="#">PRIVACY</a>
+			</div>
+		</div>
+		<div class="column Copyright">
+			<br>
+			<p>Copyright © 2023, Yiheng Zhang.</p>
+		</div>
+		<br>
+	  </div>
+	 </div>
+    </footer>
+    
+</body>
+
+<!-- the javascript for this page -->
+<script src="/fashionweb/Javascript/HomePage.js"></script>
+<script src="/fashionweb/Javascript/generalUse.js"></script>
+</html>
