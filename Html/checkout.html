@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <link rel="stylesheet" href="/fashionweb/css/root.css">
+    <link rel="stylesheet" href="/fashionweb/css/color.css">
+    <link rel="stylesheet" href="/fashionweb/css/style.css">
+    <link rel="stylesheet" href="/fashionweb/css/structure.css">
+    <link rel="stylesheet" href="/fashionweb/css/structure_phone.css">
+
+    <!-- Icons & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body style ="background-color: #f7efec;">
+	<div>
+		<div class="content-check-container">
+			<!-- Checkout navigation bar ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<div class="checkout_navbarContainer">
+				<a class="logo" onclick="goHomePage()"><img src="/fashionweb/icons/nav-log.png" alt="logo"></a>
+				<div>
+					<a href="/fashionweb/Html/cart_summary.html" class="navbar_links checkout_cart">Cart</a> 
+					<ion-icon name="chevron-forward-outline"></ion-icon>
+					<a class="navbar_links checkout_1 notDesigned" >information</a>
+					<ion-icon name="chevron-forward-outline"></ion-icon>
+					<a class="navbar_links notDesigned" >Shipping</a>
+					<ion-icon name="chevron-forward-outline"></ion-icon>
+					<a class="navbar_links notDesigned">Payment</a>
+				</div>
+			</div>
+			<!-- Paymentid="adjustPopup" success popup window ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<div id="adjustPopup">
+				<div class="popup_container">
+					<div>
+						<ion-icon name="checkmark-circle-outline"></ion-icon>
+						<p>Order #0021<br> Thank you submission!</p>
+					</div>
+					<div>
+						<p><span style="font-weight:600;font-size: 22px;">Your order is confirmed</span><br><br><span style="font-size:18px;font-weight: 300;">You'll receive a confirmation email with your order number shortly</span></p>
+					</div>
+					<div>
+						<div>
+						</div>
+						<div class="recipt_container">
+							<p style="font-weight: 550;font-size: 22px;">Customer Information</p>
+							<div>
+								<p style="font-weight: 700;font-size: 20px;">Delivering to:</p>
+								<p id="user_address"></p>
+							</div>
+							<div>
+								<p style="font-weight: 700;font-size: 20px;">Contact information</p>
+								<p id="user_email"></p>
+							</div>
+							<div>
+								<p style="font-weight: 700;font-size: 20px;">Seller:</p>
+								<p>Fashion·Anything Scarf Factory 901 Swanston St.</p>
+							</div>
+							<div>
+								<p style="font-weight: 700;font-size: 20px;">Buyer:</p>
+								<p id="user_name"></p>
+							</div>
+							<div>
+								<p style="font-weight: 700;font-size: 20px;">Item:</p>
+								<p><span style="font-weight: 700;font-size: 20px;">Product Info:</span> Soft Wools Scarf Quantity: 1 Price: $35.00</p>
+								<p><span style="font-weight: 700;font-size: 20px;">Product Info:</span> Cozy Wools Scarf  Quantity: 1 Price: $59.95</p>   
+							</div>
+							<div>
+								<p ><span style="font-weight: 400;font-size: 18px;">Subtotal: $94.95</span></p>
+								<p ><span style="font-weight: 400;font-size: 18px;">Tax: $3.05</span></p>
+								<p ><span style="font-weight: 400;font-size: 18px;">Shipping Method: <span class="recipt">FREE</span></span></p>
+								<p><span style="font-weight: 700;font-size: 22px;">Total:</span> <span class="recipt">$98.00</span></p>
+							</div>
+						</div>
+					</div>
+					<div class="nextStep">
+						<input type="submit" value="Track your order">
+						<a href="/index.html"> Continue shopping</a>
+					</div>
+				</div>
+			
+			</div>
+			
+
+			<!-- The whole checkout processes, information - shipping - payment ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+			<div class="chekcout_areaContainer">
+				<!-- Information -->
+				<div class="checkout">
+					<div>
+						<p>Express Checkout</p>
+						<div>
+							<img src="/fashionweb/icons/Shop_pay.png" alt="Shop Pay payment">
+							<img src="/fashionweb/icons/G_pay.png" alt="Google pay payment">
+						</div>
+					</div>
+
+					<div>
+						<hr>
+						<span>OR</span>
+						<hr>
+					</div>
+
+					<form id="userInfo_form" class="chekcout_form" method="get">
+						<div>
+							<p class="checkout_subtitle">Contact Information</p>
+							<p style="font-weight:300;font-size: 16px;">Already have an account?<a class="notDesigned"> Log in</a></p>
+						</div>
+						<label for="email">*Your email</label>
+						<input type="email" id="email" name="email" required>
+						<div class="form_checkbox">
+							<input type="checkbox" id="email_checkbox"><label for="email_checkbox"> Email me with news and offers</label>
+						</div>
+
+						<p class="checkout_subtitle">Shipping address</p>
+						<div class="form_name">
+							<div>
+								<label class="form_adjust" for="firstName">First name (optional)</label>
+								<input type="text" id="firstName" name="firstName" pattern="[a-zA-Z ]+"
+									title="Please enter only letters and space, e.g. John">
+							</div>
+							<div>
+								<label class="form_adjust" for="lastName">*Last name</label>
+								<input type="text" id="lastName" name="lastName" required pattern="[A-Za-z ]+"
+									title="Please enter only letters and space, e.g. John">
+							</div>
+						</div>
+
+						<label class="form_adjust" for="company">Company (optional)</label>
+						<input type="text" id="company" name="company">
+
+						<label class="form_adjust" for="address">*Address</label>
+						<input type="text" id="address" name="address" required>
+
+						<label class="form_adjust" for="apartment">Apartment, suite, etc. (optional)</label>
+						<input type="text" id="apartment" name="apartment">
+
+						<label class="form_adjust" for="country"> *Country/Region </label>
+						<select id="country" name="country" required>
+							<option value="">Choose your Country/Region</option>
+							<option value="Australia">Australia</option>
+							<option value="China">China</option>
+							<option value="France">France</option>
+							<option value="Greek">Greek</option>
+							<option value="India">India</option>
+							<option value="Italy">Italy</option>
+							<option value="Japan">Japan</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="United States">United States</option>
+							<option value="South Korea">South Korea</option>
+							<option value="Vietnam">Vietnam</option>
+						</select>
+
+						<div class="form_region">
+							<div>
+								<label class="form_adjust" for="city">*City</label>
+								<input type="text" id="city" name="city" required>
+							</div>
+
+							<div>
+								<label class="form_adjust" for="state">*State</label>
+								<select id="state" name="state" required>
+									<option value="">Choose your State</option>
+									<option value="Victoria">Victoria</option>
+									<option value="Queensland">Queensland</option>
+									<option value="South Australia">South Australia</option>
+									<option value="Western Australia">Western Australia</option>
+								</select>
+							</div>
+
+							<div>
+								<label class="form_adjust" for="postcode">*Postcode</label>
+								<input type="text" id="postcode" name="postcode" required pattern="\d{4,4}"
+									title="Please enter only 4 digits" >
+							</div>
+						</div>
+						
+						<label class="form_adjust" for="phone">Phone (optional)</label>
+						<input type="tel" id="phone" name="phone" pattern="[0-9 +-]+"
+							title="Please enter only digits, hyphen and plus sign for your region">
+						<div class="form_checkbox">
+							<input type="checkbox" id="email_checkbox"><label for="email_checkbox">Save this information for next time</label>
+						</div>
+						<div class="nextStep">
+							<input type="submit" value="Continue to shipping">
+							<a href="/fashionweb/Html/cart_summary.html">Return to cart</a>
+						</div>
+					</form>
+				</div>
+					
+				<div class="checkout_shipping">
+					<!-- Shipping -->
+					<div class="shipping_info">
+						<div>
+							<div>
+								<p style="color:#555;font-size:medium;">Contact</p>
+								<p id="user_email0"></p>
+							</div>
+							<a onclick="returnToInfo()">Change</a>
+						</div>
+						<div>
+							<div>
+								<p style="color:#555;font-size:medium;">Ship to</p>
+								<p id="user_address0"></p>
+							</div>
+							<a onclick="returnToInfo()">Change</a>
+						</div>
+						<div class="paymentPage">
+							<div>
+								<p style="color:#555;font-size:medium;">Method</p>
+								<p id="shipping_standard">Standard - <span>FREE</span></p>
+								<p id="shipping_express">Express - <span>$15</span></p>
+							</div>
+							<a onclick="returnToShip()">Change</a>
+						</div>
+					</div>
+
+					<div class="shipping_method">
+						<p>Shipping method</p>
+						<form id="shipping_form" method="get">
+							<div>
+								<div class="shipMethod_checked">
+									<div>
+										<input type="radio" id="standard" name="shipMethod" value="standard" onclick="checked_1()" checked>
+										<label for="standard">Standard</label>
+									</div>
+									<p>Free</p>
+								</div>
+								<div class="shipMethod_checked">
+									<div>
+										<input type="radio" id="express" name="shipMethod" value="express" onclick="checked_2()" >
+										<label for="express">Express</label>
+									</div>
+									<p>$15.00</p>
+								</div>
+							</div>
+
+							<div class="nextStep">
+								<a onclick="returnToInfo()">Return to information</a>
+								<input type="submit" value="Continue to payment">
+							</div>
+						</form>
+					</div>
+
+					<!-- Payment -->
+					<form id="payment" class="paymentPage">
+						<p>Payment</p>
+						<p>All transactions are secure and encrypted</p>
+						<div>
+							<div class="payment_creditCard">
+								<div>
+									<div>
+										<input type="radio" id="creditCard" name="paymentOpt" checked>
+										<label for="creditCard">Credit card</label>
+									</div>
+									<div>
+										<img src="/fashionweb/icons/VISA_icon.png" alt="Visa">
+										<img src="/fashionweb/icons/Mastercard_icon.png" alt="Mastercard">
+									</div>
+								</div>
+								<div>
+									<div>
+										<label for="cardNumber">*Card number</label>
+										<input type="text" id="cardNumber" required pattern="[0-9]+" title="please only enter digits">
+									</div>
+			
+									<div>
+										<label for="cardName">*Name on card</label>
+										<input type="text" id="cardName" required pattern="[a-zA-Z ]+" title="please only use letters and space, e.g. John Smith">
+									</div>
+			
+									<div>
+										<div>
+											<label for="cardDate">*Expiration date</label>
+											<input type="text" id="cardDate" placeholder="MM/YY" required pattern="([0-9]{2}[/]?){2}" title="please follow the syntax given">
+										</div>
+										
+										<div>
+											<label for="cardCode">*Security code</label>
+											<input type="text" id="cardCode" required pattern="\d{3,3}" title="please enter only 3 digits">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="payment_pOrder"> 
+								<div>
+									<input type="radio" id="purchaseOrder" name="paymentOpt" disabled>
+									<label for="purchaseOrder">Purchase order</label>
+								</div>
+							</div>
+						</div>
+
+						<p>Remember me</p>
+						<div>
+							<input type="checkbox" id="saveUserInfo">
+							<label for="saveUserInfo">Save my information for a faster checkout</label>
+						</div>
+
+						<div class="nextStep">
+							<a onclick="returnToShip()">Return to shipping</a>
+							<input type="submit" value="Proceed payment">
+						</div>
+					</form>
+
+				</div>
+
+
+				<!-- order summary on the left side of the page  -->
+				<div class="orderSummary" id="orderSummary_opened">
+					<div class="sideCart_items_container">
+						<div class="sideCart_items order">
+							<div>
+								<div><img src="/fashionweb/image/covers/cover_2.jpeg" onclick="goProductPage()"></div>
+								<div class="sideCart_itemInfo">
+									<div>
+										<p>Soft Wools Scarf</p>
+										<p>Color: Blue</p>
+									</div>
+									<p>$35.00</p>
+								</div>
+							</div>
+							<div>
+								<p class="sideCart_quantityContainer order">Qty:
+									<span>
+										<span>1</span>
+									</span>
+								</p>
+							</div>
+						</div>
+						<div class="sideCart_items order">
+							<div>
+								<div><img src="/fashionweb/image/covers/cover_1.jpeg" onclick="goProductPage()"></div>
+								<div class="sideCart_itemInfo order">
+									<div>
+										<p>Cozy Wools Scarf</p>
+										<p>Color: Brown</p>
+									</div>
+									<p>$59.95</p>
+								</div>
+							</div>
+							<div>
+								<p class="sideCart_quantityContainer order">Qty:
+									<span>
+										<span>1</span>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="orderSummary_discountCode">
+						<input type="text" placeholder="Gift card or discount code">
+						<button type="button">Apply</button>
+					</div>
+
+					<div class="orderSummary_priceInfo">
+						<div>
+							<p>Subtotal:</p>
+							<p>$94.95</p>
+						</div>
+						<div>
+							<p>Shipping:</p>
+							<p id="final_shipMethod"><span style="font-size:medium">Calculated after filling shipping address</p>
+						</div>
+						<div>
+							<p>Total:</p>
+							<p><span id="totalPrice">$98.00</span></p>
+						</div>
+						<div>
+							<p></p>
+							<p><span style="font-size:medium; color:gray;">Including $3.05 in taxes</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="open_orderSummaryContainer computer_remove">
+					<div>
+						<img src="/fashionweb/icons/cart_icon_clickable.png">
+						<p id="open_orderSummary">Show order summary</p>
+						<ion-icon id="open_icon" name="chevron-down-outline"></ion-icon>
+					</div>
+
+					<p>Total: <span>$179.98</span></p>
+				</div>
+			</div>
+			<BR>
+			<BR> 
+			<BR>
+		</div>
+	</div>
+</body>
+<!-- the javascript for this page -->
+<script src="/fashionweb/Javascript/checkout.js"></script>
+<script src="/fashionweb/Javascript/generalUse.js"></script>
+</html>
