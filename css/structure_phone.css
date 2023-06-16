@@ -1611,6 +1611,7 @@
 /* Payment success popup ============================================================================================================ */
 @media screen and (max-width: 600px) {
     #adjustPopup {
+	padding-top:36vw;
         position: absolute;
         display: none;
         justify-content: center;
