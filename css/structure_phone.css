@@ -669,6 +669,7 @@
         border-radius: 0 0 var(--bg--radius) var(--bg--radius);
         box-shadow: var(--bg--shadow--hover);
         padding: var(--sideCart--padding);
+	height:80%;
     }
     
     .sideCart_title {
