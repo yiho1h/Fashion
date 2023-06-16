@@ -669,7 +669,6 @@
         border-radius: 0 0 var(--bg--radius) var(--bg--radius);
         box-shadow: var(--bg--shadow--hover);
         padding: var(--sideCart--padding);
-	height:80%;
     }
     
     .sideCart_title {
@@ -689,7 +688,7 @@
 		display: block;
 
         margin-top: var(--sideCart--padding);
-        height: 80%;
+        height: 500px;
         grid-template-rows:none;
         gap: calc(var(--sideCart--padding));
         border-radius: var(--bg--radius);
