@@ -1616,6 +1616,7 @@
         display: none;
         justify-content: center;
         width: 100%;
+	line-height:1.5;
     }
     
     #popup_dropShadow {
