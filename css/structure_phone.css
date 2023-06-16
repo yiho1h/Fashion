@@ -688,7 +688,7 @@
 		display: block;
 
         margin-top: var(--sideCart--padding);
-        height: 500px;
+        max-height: 500px;
         grid-template-rows:none;
         gap: calc(var(--sideCart--padding));
         border-radius: var(--bg--radius);
