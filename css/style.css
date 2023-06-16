@@ -596,11 +596,6 @@ img, input[type="radio"], input[type="checkbox"], a, button{
     backdrop-filter: brightness(70%);
 }
 
-.popup_container {
-    border-radius: var(--bg--radius);
-    box-shadow: var(--popup--shadow);
-}
-
 .popup_container > a {
     text-decoration: underline 0.15vw;
 }
