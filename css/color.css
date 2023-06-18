@@ -110,28 +110,28 @@
   }
 
 /* Recommendation ================================================================================================================================================= */
-.bookList_topbar {
+.scarfList_topbar {
   background-color: var(--background--tertiary);
 }
 
-.bookList_topbar__text {
+.scarfList_topbar__text {
   color: var(--tx--secondary);
 }
 
 
-.bookList_bookInfo p:hover {
+.scarfList_scarfInfo p:hover {
   color: #d51243;
 }
 
-.bookList_title {
+.scarfList_title {
   color: var(--tx--secondary);
 }
 
-.bookList_author {
+.scarfList_author {
   color: var(--tx--tertiary);
 }
 
-.bookList_price {
+.scarfList_price {
   color: var(--tx--secondary);
 }
 
