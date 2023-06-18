@@ -1,7 +1,5 @@
 /* Homepage ================================================================================================================== */
-	.index_body{
-		width: 100%;
-	}
+
 /* Main navigation bar */
 @media screen and (max-width: 600px)  {
 	.topBar{
@@ -25,10 +23,9 @@
 	 }
 
 	.topBar_container:nth-child(5) {
-		margin-left: -40px ;
+		margin-left: -20px ;
     }
-
-	
+    
 
     #cart_icon {
         width: calc(26px*0.8);
@@ -354,33 +351,33 @@
         margin-top: 20px;
     }
     
-    .bookList_scrollContainer {
+    .scarfList_scrollContainer {
         overflow-x: scroll;
         border-radius: var(--bg--radius);
         padding: 10px;
     }
     
-    .bookList_scrollContainer::-webkit-scrollbar {
+    .scarfList_scrollContainer::-webkit-scrollbar {
         display: none;
     }
     
-    .bookList_topbar {
+    .scarfList_topbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: calc(var(--_size)*0.5) var(--_size);
     }
     
-    .bookList_topbar__text {
+    .scarfList_topbar__text {
         font-size: calc(var(--_size)*1.2);
     }
     
-    #bookList_topbar__scrollRight {
+    #scarfList_topbar__scrollRight {
         height: calc(var(--_size)*1.4);
         width: calc(var(--_size)*1.4);
     }
     
-    .bookList {
+    .scarfList {
         margin-top: 25px;
         position: relative;
         padding: 10px 0;
@@ -402,11 +399,11 @@
         transform: translateY(-2px);
     }
     
-    .bookList::-webkit-scrollbar {
+    .scarfList::-webkit-scrollbar {
         display: none;
     }
     
-    .bookList_productImg {
+    .scarfList_productImg {
 		margin-top: 10vw;
 		border-radius: 5px;
         position: absolute;
@@ -414,7 +411,7 @@
         height: 60vw;
     }
     
-    .bookList_background {
+    .scarfList_background {
 		height: 92vw;
 		width: 62vw;
         display: flex;
@@ -423,36 +420,36 @@
         align-items: center;
     }
     
-    .bookList_bookInfo {
+    .scarfList_scarfInfo {
         margin-top: 60vw;
         text-align: left;
-        width: calc(var(--bookTitle--width));
+        width: calc(var(--scarfTitle--width));
         overflow: hidden; 
         white-space: nowrap;
     }
     
-    .bookList_bts__container {
+    .scarfList_bts__container {
         display: flex;
     }
     
-    .bookList_title  {
+    .scarfList_title  {
         font-size: calc(var(--_size)*1.6);
     }
 
-    .bookList_price  {
+    .scarfList_price  {
         font-size: 15px;
         margin-top: 5px;
     }
     
     
-    .bookList_productBts {
+    .scarfList_productBts {
         margin: calc(var(--_size));
         display: block;
         height: 10vw;
 		width: 10vw;
     }
     
-    .bookList_productBts:hover {
+    .scarfList_productBts:hover {
         transform: translateY(-1px);
     }
 }
@@ -686,7 +683,6 @@
     
     .sideCart_items_container {
 		display: block;
-
         margin-top: var(--sideCart--padding);
         max-height: 360px;
         grid-template-rows:none;
@@ -728,7 +724,7 @@
     }
     
     .sideCart_itemInfo div p:nth-child(1) {
-        width: var(--bookTitle--width);
+        width: var(--scarfTitle--width);
         font-size: calc(var(--_size)*1.5);
     }
     
@@ -837,7 +833,7 @@
         gap: 3vw;
     }
 
-    .bookList_background_phone {
+    .scarfList_background_phone {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -848,46 +844,46 @@
         border-radius: var(--bg--radius);
         box-shadow: var(--bg--shadow--hover);
     }
-	.bookList_background_phone > :nth-child(1) img{
+	.scarfList_background_phone > :nth-child(1) img{
 		width: 100px;
     }
 
-    .bookList_bookInfo_phone {
+    .scarfList_scarfInfo_phone {
         float: left;
         display: flex;
         flex-direction: column;
         margin-left: 3vw;
     }
 
-    .bookList_bookInfo_phone p:nth-child(1) {
+    .scarfList_scarfInfo_phone p:nth-child(1) {
         font-size: 4.5vw;
         color: var(--tx--secondary);
     }
 
-    .bookList_bookInfo_phone p:nth-child(2) {
+    .scarfList_scarfInfo_phone p:nth-child(2) {
         margin-bottom: 5vw;
         margin-top: 0.8vw;
         font-size: 3.2vw;
         color: var(--tx--tertiary);
     }
 
-    .bookList_bookInfo_phone p:nth-child(3) {
+    .scarfList_scarfInfo_phone p:nth-child(3) {
         font-size: 3.6vw;
         color: var(--tx--secondary);
         margin-bottom: 1vw;
     }
 
-    .bookList_background_phone > div:nth-child(1) {
+    .scarfList_background_phone > div:nth-child(1) {
         display: flex;
         align-items: center;
     }
 
-    .bookList_bts_container_phone {
+    .scarfList_bts_container_phone {
         display: flex;
         flex-direction: column;
     }
 
-    .bookList_productImg_phone {
+    .scarfList_productImg_phone {
         height: 30vw;
         width: 12vw;
         float: left;
