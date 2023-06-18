@@ -199,3 +199,4 @@ payment.addEventListener("submit", function(e) {
     document.getElementById("subtotalPrice").innerHTML = "0.00";
     cart_items.style.display = "none";
 });
+
