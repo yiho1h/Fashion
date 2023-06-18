@@ -26,7 +26,7 @@ const product_7 = document.getElementById("product_7_cart");
 const item_7 = document.getElementById("item_7");
 const remove_7 = document.getElementById("remove_7");
 
-const books_price = document.getElementsByClassName("bookList_price");
+const scarfs_price = document.getElementsByClassName("scarfList_price");
 let title_itemTotal = document.getElementById("title_itemTotal");
 let subtotalPrice_itemTotal = document.getElementById("subtotalPrice_itemTotal");
 let subtotalPrice = parseFloat(document.getElementById("subtotalPrice").innerHTML);
@@ -102,7 +102,7 @@ function addProduct_1() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
 
     // calculating the subtotal price
-    subtotalPrice += parseFloat(books_price[0].innerHTML.slice(1));
+    subtotalPrice += parseFloat(scarfs_price[0].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
 
     product_1.src = "/fashionweb/icons/cart_bt_clicked.png";
@@ -113,7 +113,7 @@ function addProduct_1() {
 function removeProduct_1() {
     cart_items.innerHTML--;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice -= parseFloat(books_price[0].innerHTML.slice(1));
+    subtotalPrice -= parseFloat(scarfs_price[0].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     
     product_1.src = "/fashionweb/icons/cart_bt.png";
@@ -146,7 +146,7 @@ function product_2_detect() {
 function addProduct_2() {
     cart_items.innerHTML++;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice += parseFloat(books_price[1].innerHTML.slice(1));
+    subtotalPrice += parseFloat(scarfs_price[1].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
 
     product_2.src = "/fashionweb/icons/cart_bt_clicked.png";
@@ -157,7 +157,7 @@ function addProduct_2() {
 function removeProduct_2() {
     cart_items.innerHTML--;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice -= parseFloat(books_price[1].innerHTML.slice(1));
+    subtotalPrice -= parseFloat(scarfs_price[1].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     product_2.src = "/fashionweb/icons/cart_bt.png";
     product_2_phone.src = "/fashionweb/icons/cart_bt.png";
@@ -189,7 +189,7 @@ function product_3_detect() {
 function addProduct_3() {
     cart_items.innerHTML++;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice += parseFloat(books_price[2].innerHTML.slice(1));
+    subtotalPrice += parseFloat(scarfs_price[2].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     product_3.src = "/fashionweb/icons/cart_bt_clicked.png";
     product_3_phone.src = "/fashionweb/icons/cart_bt_clicked.png";
@@ -199,7 +199,7 @@ function addProduct_3() {
 function removeProduct_3() {
     cart_items.innerHTML--;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice -= parseFloat(books_price[2].innerHTML.slice(1));
+    subtotalPrice -= parseFloat(scarfs_price[2].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     product_3.src = "/fashionweb/icons/cart_bt.png";
     product_3_phone.src = "/fashionweb/icons/cart_bt.png";
@@ -231,7 +231,7 @@ function product_4_detect() {
 function addProduct_4() {
     cart_items.innerHTML++;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice += parseFloat(books_price[3].innerHTML.slice(1));
+    subtotalPrice += parseFloat(scarfs_price[3].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     product_4.src = "/fashionweb/icons/cart_bt_clicked.png";
     product_4_phone.src = "/fashionweb/icons/cart_bt_clicked.png";
@@ -241,7 +241,7 @@ function addProduct_4() {
 function removeProduct_4() {
     cart_items.innerHTML--;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice -= parseFloat(books_price[3].innerHTML.slice(1));
+    subtotalPrice -= parseFloat(scarfs_price[3].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     product_4.src = "/fashionweb/icons/cart_bt.png";
     product_4_phone.src = "/fashionweb/icons/cart_bt.png";
@@ -273,7 +273,7 @@ function product_5_detect() {
 function addProduct_5() {
     cart_items.innerHTML++;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice += parseFloat(books_price[4].innerHTML.slice(1));
+    subtotalPrice += parseFloat(scarfs_price[4].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     product_5.src = "/fashionweb/icons/cart_bt_clicked.png";
     product_5_phone.src = "/fashionweb/icons/cart_bt_clicked.png";
@@ -283,7 +283,7 @@ function addProduct_5() {
 function removeProduct_5() {
     cart_items.innerHTML--;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice -= parseFloat(books_price[4].innerHTML.slice(1));
+    subtotalPrice -= parseFloat(scarfs_price[4].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     product_5.src = "/fashionweb/icons/cart_bt.png";
     product_5_phone.src = "/fashionweb/icons/cart_bt.png";
@@ -315,7 +315,7 @@ function product_6_detect() {
 function addProduct_6() {
     cart_items.innerHTML++;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice += parseFloat(books_price[5].innerHTML.slice(1));
+    subtotalPrice += parseFloat(scarfs_price[5].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     product_6.src = "/fashionweb/icons/cart_bt_clicked.png";
     product_6_phone.src = "/fashionweb/icons/cart_bt_clicked.png";
@@ -325,7 +325,7 @@ function addProduct_6() {
 function removeProduct_6() {
     cart_items.innerHTML--;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice -= parseFloat(books_price[5].innerHTML.slice(1));
+    subtotalPrice -= parseFloat(scarfs_price[5].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     product_6.src = "/fashionweb/icons/cart_bt.png";
     product_6_phone.src = "/fashionweb/icons/cart_bt.png";
@@ -357,7 +357,7 @@ function product_7_detect() {
 function addProduct_7() {
     cart_items.innerHTML++;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice += parseFloat(books_price[6].innerHTML.slice(1));
+    subtotalPrice += parseFloat(scarfs_price[6].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     product_7.src = "/fashionweb/icons/cart_bt_clicked.png";
     item_7.style.display = "flex";
@@ -366,7 +366,7 @@ function addProduct_7() {
 function removeProduct_7() {
     cart_items.innerHTML--;
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice -= parseFloat(books_price[6].innerHTML.slice(1));
+    subtotalPrice -= parseFloat(scarfs_price[6].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     product_7.src = "/fashionweb/icons/cart_bt.png";
     item_7.style.display = "none";
@@ -377,6 +377,11 @@ function removeProduct_7() {
         cart_items.style.display = "block";
     }
 }
+
+
+
+
+
 
 
 
