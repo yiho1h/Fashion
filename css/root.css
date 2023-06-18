@@ -18,7 +18,7 @@
     --profile--padding: 0.8vw;
     --sideCart--padding: 0.9vw;
 
-    --bookTitle--width: 11vw;
+    --scarfTitle--width: 11vw;
     --brandIcon--width: 8.5vw;
     --brandIcon--height: 3.5vw;
     --img--width: 7vw;
@@ -87,7 +87,7 @@
         --profile--padding: calc(10.5px*0.5);
         --sideCart--padding: calc(15px*0.5);
 
-        --bookTitle--width: calc(150px*0.5);
+        --scarfTitle--width: calc(150px*0.5);
         --brandIcon--width: calc(120px*0.6);
         --brandIcon--height: calc(55px*0.6);
         --img--width: calc(110px*0.5);
